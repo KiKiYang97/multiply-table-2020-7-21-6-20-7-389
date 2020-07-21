@@ -5,14 +5,14 @@ function createMultiplyTable(start, end) {
   return null;
 }
 function isNumbersValid(start,end){
-  var flag=true;
+  var isValid=true;
   if(start>end){
-    flag = false;
+    isValid = false;
   }
   if((start>1000||start<1)&&(end>1000||end<1)){
-    flag = false;
+    isValid = false;
   }
-  return flag;
+  return isValid;
 }
 function generateMultiplyTable(start,end){
   var table="";
@@ -27,7 +27,8 @@ function generateMultiplyTable(start,end){
 }
 function printMultiple(multiplier,multiplicand){
   var product = multiplier * multiplicand;
-  return multiplier + "*"+ multiplicand+"="+product;
+  var tableLine = multiplier + "*"+ multiplicand+"="+product;
+  return tableLine;
 }
 module.exports = {
   createMultiplyTable,
